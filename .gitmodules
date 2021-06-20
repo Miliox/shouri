@@ -7,3 +7,6 @@
 [submodule "modules/argparse"]
 	path = modules/argparse
 	url = https://github.com/p-ranav/argparse.git
+[submodule "modules/fmt"]
+	path = modules/fmt
+	url = https://github.com/fmtlib/fmt.git
