@@ -4,3 +4,6 @@
 [submodule "modules/benchmark"]
 	path = modules/benchmark
 	url = https://github.com/google/benchmark.git
+[submodule "modules/argparse"]
+	path = modules/argparse
+	url = https://github.com/p-ranav/argparse.git
