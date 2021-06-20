@@ -1,10 +1,14 @@
-# CXX Project Template
+# Shouri (勝利)
 
-Basic C++/CMake Template Project.
+An Atari 2600 Emulator.
 
 ## Installation
 
-Generate build files:
+```
+git submodule update --init
+```
+
+## Make
 
 ```
 mkdir build
