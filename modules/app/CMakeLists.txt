@@ -6,3 +6,4 @@ file(GLOB SOURCES src/**.cpp)
 
 add_executable(${PROJECT_NAME} ${INCLUDES} ${SOURCES})
 target_include_directories(${PROJECT_NAME} PUBLIC include)
+target_link_libraries(${PROJECT_NAME} PUBLIC fmt)
