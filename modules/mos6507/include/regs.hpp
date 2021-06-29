@@ -20,6 +20,8 @@ union flags_t
         std::uint8_t negative: 1;
     };
     r8_t flags;
+
+    consteval flags_t() : flags(0) {}
 };
 
 /**
@@ -41,23 +43,19 @@ union regs_t
         /// stack pointer
         r8_t sp;
 
-        /// program counter
-        r8_t pc;
-
-        // processor status
-        flags_t ps;
-
         /// data bank
         r8_t db; 
 
         /// direct page
-        r8_t dp; 
+        r8_t dp;
+
+        // processor status
+        flags_t ps;
+
+        /// program counter
+        uint16_t pc;
     };
-    std::uint64_t raw;
-
-    consteval regs_t() { raw = 0; }
+    consteval regs_t() : a(0), x(0), y(0), sp(0), db(0), dp(0), ps(), pc(0) {}
 };
-
-static_assert(sizeof(regs_t) == 8);
 
 } // namespace

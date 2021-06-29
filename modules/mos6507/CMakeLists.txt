@@ -4,13 +4,16 @@ project(mos6507)
 set(INCLUDES
     include/r8.hpp
     include/regs.hpp
-    include/isa.hpp)
+    include/isa.hpp
+    include/cpu.hpp)
 
 set(SOURCES
-    src/isa.cpp)
+    src/isa.cpp
+    src/cpu.cpp)
 
 set(TESTS
     test/isa_tests.cpp
+    test/cpu_tests.cpp
     test/main.cpp)
 
 add_library(${PROJECT_NAME} STATIC ${INCLUDES} ${SOURCES})
