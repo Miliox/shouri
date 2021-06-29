@@ -18,8 +18,8 @@ union flags_t
         std::uint8_t mode: 1;       // (0 - 16bit, 1 - 8bit)
         std::uint8_t overflow: 1;
         std::uint8_t negative: 1;
-    } flags;
-    r8_t raw;
+    };
+    r8_t flags;
 };
 
 /**
@@ -27,7 +27,7 @@ union flags_t
  */
 union regs_t
 {
-    struct r_t
+    struct
     {
         /// accumulator
         r8_t a;
@@ -52,7 +52,7 @@ union regs_t
 
         /// direct page
         r8_t dp; 
-    } r;
+    };
     std::uint64_t raw;
 
     consteval regs_t() { raw = 0; }
